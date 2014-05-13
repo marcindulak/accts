@@ -5,3 +5,6 @@ def agts(queue):
         queue.add('deviceQuery.py',
                   queueopts=['-l', 'nodes=1:ppn=1:gpus=1'],
                   ncpus=1, walltime=5, deps=[])
+        queue.add('bandwidthTest.py',
+                  queueopts=['-l', 'nodes=1:ppn=1:gpus=1'],
+                  ncpus=1, walltime=5, deps=[])
