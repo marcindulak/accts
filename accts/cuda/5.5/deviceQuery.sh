@@ -6,6 +6,7 @@ if test X$PBS_ENVIRONMENT = XPBS_BATCH; then cd $PBS_O_WORKDIR; fi
 # load the required modules
 module load cuda/5.5
 
+cp -rp /opt/cuda/5.5/samples/1_Utilities/deviceQuery .
 cd deviceQuery
 sed -i -e 's|INCLUDES.*=.*|INCLUDES=-I$(CUDA_PATH)/samples/common/inc|' Makefile
 sed -i -e 's|../../bin/|./bin/|' Makefile
