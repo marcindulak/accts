@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# -- run in the current working (submission) directory --
+if test X$PBS_ENVIRONMENT = XPBS_BATCH; then cd $PBS_O_WORKDIR; fi
+
+# load the required modules
+module load gcc
+module load mpi/gcc
+module load OpenFoam/2.2.2/gcc-4.7.2-openmpi
+
+# execute the job
+decomposePar
+mpirun interFoam -parallel > first.log
+
