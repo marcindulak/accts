@@ -3,7 +3,7 @@ restart;
 p := 20:
 f := n -> x^n;
 result := NULL:  # Start with an empty exprseq.
-for n from 1 to p do
+for n from 0 to p do
   result := result, int(f(n),x) # Append an operand to the exprseq.
 od:
 result;  # Show the final exprseq.
@@ -12,6 +12,6 @@ result;  # Show the final exprseq.
 restart;
 p := 20:
 f := n -> x^n;
-CodeTools:-Usage([seq](int(f(n), x), n= 1..p, 1));
+CodeTools:-Usage([seq](int(f(n), x), n= 0..p, 1));
 
 # TODO: multi-threading version ...
