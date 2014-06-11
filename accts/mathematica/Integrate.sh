@@ -9,9 +9,9 @@ export PATH=/appl/mathematica/bin:${PATH}
 # http://reference.wolfram.com/mathematica/guide/ParallelComputing.html
 
 # 1. parallel
-# mathematica does not integrate with Moab
+# mathematica does not integrate with Moab (June 2014)
+# http://reference.wolfram.com/mathematica/ClusterIntegration/guide/ClusterIntegration.html
 # so we LaunchKernels[n] where n is the number of cores assigned by Moab
-# http://sc.tamu.edu/help/faq/Mathematica.php
 ( echo "LaunchKernels["`cat $PBS_NODEFILE | wc -l`"]"; cat ParallelTable.m ) | time math
 # 2. serial
 time math < Do.m
