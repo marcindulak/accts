@@ -1,0 +1,2 @@
+# http://octave.sourceforge.net/octave/function/linspace.html
+disp(linspace(1, 4, 3))
