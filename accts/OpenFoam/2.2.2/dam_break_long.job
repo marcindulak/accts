@@ -12,3 +12,6 @@ module load OpenFoam/2.2.2/gcc-4.7.2-openmpi
 decomposePar
 mpirun interFoam -parallel > first.log
 
+# clean after run
+rm -rf constant first.log processor*
+

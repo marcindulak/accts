@@ -19,3 +19,5 @@ mpif77
 mpicc'
 for f in $exe; do which $f; done
 for f in `find . -maxdepth 1 -executable -type f | LC_ALL=C sort`; do echo Running $f; ldd $f; mpiexec $f; done
+# clean
+make clean
