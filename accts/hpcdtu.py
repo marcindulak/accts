@@ -57,7 +57,7 @@ class HPCDTUCluster(Cluster):
 
         qsub = (['/apps/dcc/bin/qsub', '-V'] + queueopts
                + ['-l',
-               'walltime=%d:%02d:00' %
+               'walltime=%02d:%02d:00' %
                (job.walltime // 3600, job.walltime % 3600 // 60),
                '-N',
                job.name])
