@@ -7,4 +7,4 @@ if test X$PBS_ENVIRONMENT = XPBS_BATCH; then cd $PBS_O_WORKDIR; fi
 export PATH=/appl/ansys/bin:${PATH}
 
 cp -rp /appl/ansys/14/v140/CFX/examples/OscillatingPlate.* .
-ansys -machines `echo $PBS_NODEFILE` -b -i OscillatingPlate.inp
+ansys -dis -np `cat $PBS_NODEFILE | wc -l` -cnf $PBS_NODEFILE -b -i OscillatingPlate.pre

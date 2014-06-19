@@ -6,5 +6,5 @@ if test X$PBS_ENVIRONMENT = XPBS_BATCH; then cd $PBS_O_WORKDIR; fi
 # set path
 export PATH=/appl/ansys/bin:${PATH}
 
-ansys -machines `echo $PBS_NODEFILE` -mpitest
+ansys -dis -np `cat $PBS_NODEFILE | wc -l` -cnf $PBS_NODEFILE -mpitest
 
