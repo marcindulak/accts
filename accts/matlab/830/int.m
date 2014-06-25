@@ -41,3 +41,11 @@ parfor i = 0:p
     disp(int(f(i), x));
 end
 toc;
+% close the pools
+if ver_matlab.Version <= '8.1'  % R2013a uses matlabpool
+   matlabpool('close');
+else
+   poolobj = gcp('nocreate');
+   delete(poolobj);
+end
+
