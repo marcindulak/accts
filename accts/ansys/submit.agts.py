@@ -1,7 +1,7 @@
 import os
 
 def agts(queue):
-    if 1:
+    if 0:
         queue.add('mpitest.py',
                   queueopts=['-l', 'nodes=2:ppn=16'],
                   walltime=1, deps=[])

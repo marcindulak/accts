@@ -1,0 +1,2 @@
+# Monday morning
+00 01 * * 1 NODE_TYPE=hpc email='yourmail@' sh ~/accts/accts.el6.sh

@@ -1,12 +1,9 @@
-#email=dulak@fysik.dtu.dk,sebo@dtu.dk
-email=dulak@fysik.dtu.dk
-#email=dulak@fysik.dtu.dk,marcin.dulak@gmail.com
+#!/bin/sh
 
 # scipy.weave!                                                             
 python_compiled=`readlink -f ~/.python26_compiled`
+# where python modules are
+python_path=`readlink -f ~/accts/accts`
 
-#date=`/bin/date +"%Y-%m-%d"`
-
-#/bin/rm -f ~/.matplotlib/fontList.cache && /bin/rm -rf ${python_compiled} && /bin/rm -f ~/accts/results.out-${date} && /bin/rm -rf ~/accts/results-${date} && mkdir -p ~/accts/results-${date} && export PYTHONDONTWRITEBYTECODE=1 && export PYTHONPATH=`readlink -f ~/accts/accts`:${PYTHONPATH} && python -tt -Wd ~/accts/accts.el6.py --dir ~/accts/results-${date} --email ${email} > ~/accts/results.out-${date}
-# Monday morning
-00 01 * * * date=`/bin/date +"\%Y-\%m-\%d"`&& /bin/rm -f ~/.matplotlib/fontList.cache && /bin/rm -rf ${python_compiled} && /bin/rm -f ~/accts/results.out-${date} && /bin/rm -rf ~/accts/results-${date} && mkdir -p ~/accts/results-${date} && export PYTHONDONTWRITEBYTECODE=1 && export PYTHONPATH=`readlink -f ~/accts/accts`:${PYTHONPATH} && python -tt -Wd ~/accts/accts.el6.py --dir ~/accts/results-${date} --email ${email} > ~/accts/results.out-${date}
+# This assumes the root directory of ~/accts - the results of the tests will be ~/accts/results*
+date=`/bin/date +"%Y-%m-%d"`&& /bin/rm -f ~/.matplotlib/fontList.cache && /bin/rm -rf ${python_compiled} && /bin/rm -f ~/accts/results.out-${date} && /bin/rm -rf ~/accts/results-${date} && mkdir -p ~/accts/results-${date} && export PYTHONDONTWRITEBYTECODE=1 && export PYTHONPATH=${python_path}:${PYTHONPATH} && python -tt -Wd ~/accts/accts.el6.py --dir ~/accts/results-${date} --email ${email} > ~/accts/results.out-${date}
