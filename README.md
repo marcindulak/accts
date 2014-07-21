@@ -24,9 +24,8 @@ and submit jobs accordingly to definitions found in those \*.agts.py files.
 The result are reported under results*, and an email is send, e.g.::
 
     # job                                                                  status      time   tmax ncpus  deps files id
-    accts/Gaussian/09_D01/H2O_scratch.py                                   success        7    360     1     0     0 225129
-    accts/Gaussian/09_D01/H2O_home.py                                      success        8    360     1     0     0 225130
-    accts/maple/Integrate.py                                               success        4    180     1     0     0 225131
-    accts/scilab/parallel_run.py                                           success        5    180     1     0     0 225132
-
+    accts/scilab/parallel_run.py                                           success        6    180     1     0     0 187248
+    accts/namd2/2.9/alanin.py                                              FAILED         9    360     1     0     0 187250
+    accts/mathematica/Integrate.py                                         success        6    180     1     0     0 187258
+    accts/OpenFoam/2.2.2/dam_break_long.py                                 TIMEOUT             960    16     0     0 187259
 
