@@ -19,8 +19,8 @@ The main python module is under accts/agts.py (the original
 GPAW one: there should be no need to modify this)
 and the particular batch system configuration is in accts/hpcdtu.py (review and modify it).
 
-In short, the test system when started by cron will search for *.agts.py
-and submit jobs accordingly to definitions found in those *.agts.py files.
+In short, the test system when started by cron will search for \*.agts.py
+and submit jobs accordingly to definitions found in those \*.agts.py files.
 The result are reported under results*, and an email is send, e.g.::
 
     # job                                                                  status      time   tmax ncpus  deps files id
