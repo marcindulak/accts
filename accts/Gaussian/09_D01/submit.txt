@@ -1,1 +1,1 @@
-submit.sh
+submit_scratch.sh
