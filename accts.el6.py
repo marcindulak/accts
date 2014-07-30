@@ -103,7 +103,7 @@ for f in files:
 version = 1
 
 # MDTMP: version should be git revision
-subject = 'ACCTS %s: ' % str(version)
+subject = 'ACCTS version %s:' % str(version)
 # Send mail:
 sfile = os.path.join(dir, 'status.log')
 attach = sfile
