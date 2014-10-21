@@ -6,10 +6,14 @@ if test X$PBS_ENVIRONMENT = XPBS_BATCH; then cd $PBS_O_WORKDIR; fi
 # load the required modules
 module load OpenFoam/2.3.0/gcc-4.8.3-openmpi
 
+rm -rf /SCRATCH/$USER/OpenFoam/2.3.0
+mkdir -p /SCRATCH/$USER/OpenFoam/2.3.0
+cp -rp 0 constant system /SCRATCH/$USER/OpenFoam/2.3.0
+cd /SCRATCH/$USER/OpenFoam/2.3.0
 # execute the job
 decomposePar
 mpirun interMixingFoam -parallel > first.log
 
 # clean after run
 rm -rf first.log processor*
-
+rm -rf /SCRATCH/$USER/OpenFoam/2.3.0
