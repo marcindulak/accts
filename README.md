@@ -1,7 +1,7 @@
 accts
 =====
 
-accts (Advanced CC (Coputing Center) Test System) is used to test software installed on an HPC system by running
+accts (Advanced CC (Computing Center) Test System) is used to test software installed on an HPC system by running
 and reporting results of the corresponding batch jobs.
 It is based on agts (Advanced GPAW Test System: https://wiki.fysik.dtu.dk/gpaw/devel/testing.html).
 
