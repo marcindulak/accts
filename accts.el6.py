@@ -68,10 +68,13 @@ if os.path.isdir(dir):
 os.mkdir(dir)
 os.chdir(dir)
 
-acctsdir = os.path.join(dir, 'accts')
+acctsroot = os.path.join(dir, 'acctsroot')  # full code repository
+acctsdir = os.path.join(dir, 'accts')  # tests subdirectory
 
-# MDTMP - this should be a git checkout of the tests repo
-cmd('cp -rp /zhome/c9/d/40082/accts/accts ' + dir)
+# git checkout
+cmd('git clone https://github.com/marcindulak/accts.git ' + acctsroot)
+# link the tests subdirectory as ~/accts.results/results-XXX/accts
+cmd('ln -s ' + os.path.join(acctsroot, 'accts') + ' ' + acctsdir)
 
 # python modules available under dir
 sys.path.insert(0, acctsdir)
