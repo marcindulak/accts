@@ -10,13 +10,16 @@ module load open64 mpi/open64
 svn co http://svn.open-mpi.org/svn/ompi/tags/v1.6-series/v1.6.5/examples
 cd examples
 make
+if test $? -gt 0;
+then
+exit 1  # catch compilation failures
+fi
 # test all executables
 exe='
 mpicc
 mpic++
 mpif90
-mpif77
-mpicc'
+mpif77'
 for f in $exe; do which $f; done
 for f in `find . -maxdepth 1 -executable -type f | LC_ALL=C sort`; do echo Running $f; ldd $f; mpiexec $f; done
 # clean
