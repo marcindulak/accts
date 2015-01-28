@@ -1,3 +1,3 @@
-# Run every night, clean the results older than one week
-50 00 * * * mkdir -p ~/accts.results && tmpwatch 168 ~/accts.results
+# Run every night, clean the results with modification date older than one week
+50 00 * * * mkdir -p ~/accts.results && tmpwatch -Mm 168 ~/accts.results
 00 01 * * * NODE_TYPE=hpc email='yourmail@' sh ~/accts/accts.el6.sh
