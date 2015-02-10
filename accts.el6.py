@@ -80,7 +80,7 @@ cmd('ln -s ' + os.path.join(acctsroot, 'accts') + ' ' + acctsdir)
 sys.path.insert(0, acctsdir)
 
 from agts import AGTSQueue
-from hpcdtu import HPCDTUCluster as Cluster
+from hpcsite import HPCCluster as Cluster
 
 queue = AGTSQueue()
 queue.collect()

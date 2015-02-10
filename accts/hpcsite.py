@@ -19,14 +19,14 @@ def wrap_pylab(names=[]):
     pylab.show = show
 	
 
-class HPCDTUCluster(Cluster):
+class HPCCluster(Cluster):
     def __init__(self):
         pass
         
     def write_pylab_wrapper(self, job):
         """Use Agg backend and prevent windows from popping up."""
         fd = open(job.script + '.py', 'w')
-        fd.write('from hpcdtu import wrap_pylab\n')
+        fd.write('from hpcsite import wrap_pylab\n')
         fd.write('wrap_pylab(%s)\n' % job.show)
         fd.write('execfile(%r)\n' % job.script)
         fd.close()
