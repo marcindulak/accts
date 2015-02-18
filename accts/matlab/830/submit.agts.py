@@ -7,5 +7,5 @@ def agts(queue):
                   ncpus=1, walltime=2, deps=[])
     if 1:
         queue.add('dcs.py',
-                  queueopts=['-l', 'nodes=1:ppn=16'],
+                  queueopts=['-l', 'nodes=1:ppn=1'],
                   ncpus=1, walltime=1, deps=[])
