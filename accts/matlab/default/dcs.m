@@ -1,8 +1,8 @@
 % http://ch.mathworks.com/matlabcentral/answers/133781-matlab-distributed-computing-server
 % http://se.mathworks.com/help/distcomp/parallel.importprofile.html
-parallel.importProfile('hpcsite.pdsh')
+parallel.importProfile('hpcsite_pdsh')
 
-cluster = parcluster('hpcsitepdsh')
+cluster = parcluster('hpcsite_pdsh')
 
 if isempty(getenv('NSLOTS'))
     NumWorkers = 1;   % no NSLOTS variable set - assuming a serial job

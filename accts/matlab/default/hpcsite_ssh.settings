@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings name="parallel" xmlns="urn:mathworks.matlab.settings" xsi:schemaLocation="urn:mathworks.matlab.settings settings.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <settings name="profiles">
-        <settings name="hpcsitessh" visible="true">
+        <settings name="hpcsite_ssh" visible="true">
             <key name="Description" visible="true">
                 <string>
                     <value><![CDATA[standard Torque/Maui/Moab cluster]]></value>
@@ -11,14 +11,14 @@
             </key>
             <key name="SchedulerComponent" visible="true">
                 <string>
-                    <value><![CDATA[hpcsitesshSchedulerComponent]]></value>
+                    <value><![CDATA[hpcsite_sshSchedulerComponent]]></value>
                 </string>
             </key>
         </settings>
     </settings>
     <settings name="schedulercomponents">
         <settings name="Torque" visible="true">
-            <settings name="hpcsitesshSchedulerComponent" visible="true">
+            <settings name="hpcsite_sshSchedulerComponent" visible="true">
                 <key name="ClusterMatlabRoot" visible="true" anytype="true">
                 </key>
                 <key name="CommunicatingJobWrapper" visible="true" anytype="true">
