@@ -23,7 +23,8 @@ GPAW one: there should be no need to modify this) and the particular batch
 system configuration is in accts/hpcsite.py (review and modify this file).
 
 The test system when started by cron will search for \*.agts.py
-files and submit jobs accordingly to definitions found in those.
+files and submit \*.sh scripts accordingly to definitions found in those.
+You will most likely need to modify both \*.agts.py and \*.sh files.
 The result are reported under ~/accts.results/*, and an email is sent, e.g.::
 
     # job                                                                  status      time   tmax ncpus  deps files id
@@ -32,3 +33,5 @@ The result are reported under ~/accts.results/*, and an email is sent, e.g.::
     accts/mathematica/Integrate.py                                         success        6    180     1     0     0 187258
     accts/OpenFoam/2.2.2/dam_break_long.py                                 TIMEOUT             960    16     0     0 187259
 
+
+ LocalWords:  accts
