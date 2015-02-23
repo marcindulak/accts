@@ -11,14 +11,14 @@
             </key>
             <key name="SchedulerComponent" visible="true">
                 <string>
-                    <value><![CDATA[TorqueProfile1SchedulerComponent3]]></value>
+                    <value><![CDATA[TorqueProfile1SchedulerComponent]]></value>
                 </string>
             </key>
         </settings>
     </settings>
     <settings name="schedulercomponents">
         <settings name="Torque" visible="true">
-            <settings name="TorqueProfile1SchedulerComponent3" visible="true">
+            <settings name="TorqueProfile1SchedulerComponent" visible="true">
                 <key name="ClusterMatlabRoot" visible="true" anytype="true">
                 </key>
                 <key name="CommunicatingJobWrapper" visible="true" anytype="true">
@@ -44,7 +44,7 @@
                 </key>
                 <key name="RshCommand" visible="true">
                     <string>
-                        <value><![CDATA[ssh]]></value>
+                        <value><![CDATA[rsh]]></value>
                     </string>
                 </key>
                 <key name="SubmitArguments" visible="true">

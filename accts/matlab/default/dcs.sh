@@ -3,8 +3,6 @@
 # -- run in the current working (submission) directory --
 if test X$PBS_ENVIRONMENT = XPBS_BATCH; then cd $PBS_O_WORKDIR; fi
 
-export PATH=/appl/matlab/830/bin:${PATH}
-
 if test 0`cat $PBS_NODEFILE | wc -l` -gt 1;
 then
     echo "DCS parallel Matlab job must be submitted to single core!"
