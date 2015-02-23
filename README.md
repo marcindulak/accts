@@ -32,6 +32,3 @@ The result are reported under ~/accts.results/*, and an email is sent, e.g.::
     accts/namd2/2.9/alanin.py                                              FAILED         9    360     1     0     0 187250
     accts/mathematica/Integrate.py                                         success        6    180     1     0     0 187258
     accts/OpenFoam/2.2.2/dam_break_long.py                                 TIMEOUT             960    16     0     0 187259
-
-
- LocalWords:  accts
