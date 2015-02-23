@@ -9,10 +9,10 @@ def agts(queue):
                       queueopts=['-l', 'nodes=2:ppn=8',
                                  '-l', 'feature=XeonE5-2680',
                                  '-W', 'x=nmatchpolicy:exactnode'],
-                      ncpus=1, walltime=3, deps=[a])
+                      ncpus=1, walltime=4, deps=[a])
     X5550 = queue.add('dam_break_long.py X5550',
                       queueopts=['-l', 'nodes=2:ppn=8',
                                  '-l', 'feature=XeonX5550',
                                  '-W', 'x=nmatchpolicy:exactnode'],
-                      ncpus=1, walltime=3, deps=[X2680])
+                      ncpus=1, walltime=4, deps=[X2680])
     
