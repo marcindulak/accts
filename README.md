@@ -24,7 +24,7 @@ system configuration is in accts/hpcsite.py (review and modify this file).
 
 The test system when started by cron will search for \*.agts.py
 files and submit jobs accordingly to definitions found in those.
-The result are reported under ~/accts.results/*, and an email is send, e.g.::
+The result are reported under ~/accts.results/*, and an email is sent, e.g.::
 
     # job                                                                  status      time   tmax ncpus  deps files id
     accts/scilab/parallel_run.py                                           success        6    180     1     0     0 187248
